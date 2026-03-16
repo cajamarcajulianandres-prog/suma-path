@@ -21,6 +21,8 @@ const server = createServer((req, res) => {
     res.end(respuestaJson);
 });
 
-server.listen(3001, '127.0.0.1', () => {
-    console.log('Servicio SUMA PATH en 127.0.0.1:3001');
+const PORT = process.env.PORT || 3001;
+
+server.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servicio SUMA PATH en 0.0.0.0:${PORT}`);
 });
